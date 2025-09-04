@@ -31,3 +31,4 @@ INSERT INTO users(
          'gregoriobt@gmail.com',
          '2112',
 );
+
