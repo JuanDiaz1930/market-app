@@ -16,22 +16,22 @@
 
    $check_email="
        select 
-       u.email
+            u.email
        from
-       user.u
+            users u
        where
-       email='$e_mail' or ide_number = '$id_number'
+          email= '$e_mail' or ide_number = '$id_number'
        LIMIT 1
    
    ";
    $res_check = pg_query($conn, $check_email);
-   if(pg_num_rows($res_check) > 0){
+   if(pg_num_rows($res_check)> 0){
       echo "<script>alert('User already exist !!')</script>";
     header('refresh_0;url=signup.html');
    }else{
          //Step3.Create query to INSERT INTO.
    $query ="INSERT INTO users (firstname, lastname, mobile_number, ide_number, email, password)
-   Values ('$f_name', '$l_name', '$m_number', '$id_number', '$e_mail', '$enc_pass')";
+   Values ('$f_name', '$l_name', '$m_number', '$id_number', '$e_mail', '$p_wd')";
 
 
    //Step4. Execute query
