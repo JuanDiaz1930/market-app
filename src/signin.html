@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marke - Login</title>
-    <link rel="icon" type="image/png" href="icons/market_main.png"
+    <link rel="icon" type="image/png" href="icons/market_main.png"/>
+    <style>
+        body {
+            background: linear-gradient(135deg, #9dc1d8, #dfdfdf);
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
 </head>
-<body bgcolor="#6E8899">
+<body>
     <center><h1>Login</h1></center>
+
     <form name="Login-form" action="signin.php" method="post">
-    <br>
-    <center><img src="images/user_default.png" width="10%"></center>
-    <table border="2" align="center">
-        <tr><td><label>Email:</label></td></tr>
-        <tr><td><input type="email" name="email" required><br></td></tr>
-        <tr><td><label>Password:</label></td></tr>
-        <tr><td><input type="password" name="passwd" required><br><br></td></tr>
-        <tr><td><div style="text-align: center;"><button style="background-color: rgb(182, 211, 212);">Register</button></td></td></tr></div>
-    </form></table>
-    <!--<input type="submit" value="Register"> -->
+        <br>
+        <center><img src="images/user_default.png" width="10%"></center>
+        <table border="2" align="center">
+            <tr><td><label>Email:</label></td></tr>
+            <tr><td><input type="email" name="email" required><br></td></tr>
+            <tr><td><label>Password:</label></td></tr>
+            <tr><td><input type="password" name="passwd" required><br><br></td></tr>
+            <tr><td><div style="text-align: center;"><button style="background-color: rgb(182, 211, 212);">Register</button></div></td></tr>
+        </table>
+    </form>
 </body>
 </html>

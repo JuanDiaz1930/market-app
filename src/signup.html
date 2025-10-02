@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market - Registrer</title>
-     <link rel="icon" type="image/png" href="../src/icons/market_main.png"/>
+    <title>Market - Register</title>
+    <link rel="icon" type="image/png" href="../src/icons/market_main.png"/>
+    <style>
+        body {
+            background: linear-gradient(135deg, #9dc1d8, #dfdfdf);
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
 </head>
-<body bgcolor="#6E8899">
+<body>
     <center><h1>Register</h1></center><br>
     <form name="Register-form" action="signup.php" method="post">
-    <table border="2" align="center">
-        <tr><td><label>Firstname:</label></td></tr>
-        <tr><td><input type="text" name="fname" required><br></td></tr>
-        <tr><td><label>Lastname:</label></td></tr>
-        <tr><td><input type="text" name="lname" required><br></td></tr>
-        <tr><td><label>Mobile number:</label></td></tr>
-        <tr><td><input type="text" name="mnumber" required><br></td></tr>
-        <tr><td><label>Identification number:</label></td></tr>
-        <tr><td><input type="text" name="idnumber" required><br></td></tr>
-        <tr><td><label>Email:</label></td></tr>
-        <tr><td><input type="email" name="email" required><br></td></tr>
-        <tr><td><label>Password:</label></td></tr>
-        <tr><td><input type="password" name="passwd" required><br><br></td></tr>
-        <tr><td><div style="text-align: center;"><button style="background-color: rgb(182, 211, 212);">Register</button></td></td></tr></div>
-    </form></table>
-    <!--<input type="submit" value="Register"> -->
+        <table border="2" align="center">
+            <tr><td><label>Firstname:</label></td></tr>
+            <tr><td><input type="text" name="fname" required><br></td></tr>
+            <tr><td><label>Lastname:</label></td></tr>
+            <tr><td><input type="text" name="lname" required><br></td></tr>
+            <tr><td><label>Mobile number:</label></td></tr>
+            <tr><td><input type="text" name="mnumber" required><br></td></tr>
+            <tr><td><label>Identification number:</label></td></tr>
+            <tr><td><input type="text" name="idnumber" required><br></td></tr>
+            <tr><td><label>Email:</label></td></tr>
+            <tr><td><input type="email" name="email" required><br></td></tr>
+            <tr><td><label>Password:</label></td></tr>
+            <tr><td><input type="password" name="passwd" required><br><br></td></tr>
+            <tr><td>
+                <div style="text-align: center;">
+                    <button style="background-color: rgb(182, 211, 212);">Register</button>
+                </div>
+            </td></tr>
+        </table>
+    </form>
 </body>
 </html>

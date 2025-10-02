@@ -1,28 +1,21 @@
+<?php
+echo "Welcome to my world !!! ";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="icon" type="image/png" href="src/icons/market_main.png"/>
-    <style>
+    <<style>
         body {
             background: linear-gradient(135deg, #9dc1d8, #dfdfdf);
-            margin: 0;
             font-family: 'Times New Roman', Times, serif;
-            text-align: center;
-            padding-top: 50px;
-        }
-        a {
-            color: black;
-            text-decoration: none;
-            margin: 0 10px;
         }
     </style>
+    <title>Marketapp - Home</title>
 </head>
 <body>
-    <h1>WELCOME</h1>
-    <a href="src/signin.html">Sign in</a> |
-    <a href="src/signup.html">Sign up</a>
+    
 </body>
-</html>
+</html> 
