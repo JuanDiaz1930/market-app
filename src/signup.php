@@ -41,6 +41,7 @@
 
    //Step5. Validate result
    if($res){
+      
     //echo "User has been created successfully !!! :D";
     echo "<script>alert('Success !!! Go to login')</script>";
     header('refresh_0;url=signin.html');
