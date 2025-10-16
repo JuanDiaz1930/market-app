@@ -33,7 +33,7 @@ require('../config/database.php');
             <td>31232234221</td>
             <td>Active</td>
         <td>
-        <a href="#"><img src="icons/search.png" width="20"></a>
+        <a href="#"><img src="icons/" width="20"></a>
         <a href="#"><img src="icons/update.png" width="20"></a>
         <a href="#"><img src="icons/delete.png" width="20"></a>
         </td>
