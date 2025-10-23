@@ -17,27 +17,42 @@ require('../config/database.php');
        
             <th>Fullname</th>
             <th>E-mail</th>
+            <th>Ide number</th>
             <th>Phoner number</th>
             <th>Status</th>
             <th>Options</th>
         </tr>
         <?php
-        sql_users = "
-        //
-       
-        ";
-        ?>
-        <tr>
-            <td>Paola Salazar</td>
-            <td>paolabb@gmail.com</td>
-            <td>31232234221</td>
-            <td>Active</td>
+        $sql_users = "
+        select
+	        u.firstname || '' || u.lastname as fullname,
+	        u.email,
+            u. ide_number,
+            u.mobile_number,
+	    case 
+            when u.status = true then 'Active' else 'Inactive' end as status
+	    from users u
+     ";
+        $result = pg_query($conn_local, $sql_users);
+        if (!$result){
+            die("Error: ".pg_last_error());
+        }
+        while ($row = pg_fetch_assoc($result)){
+            echo "
+                <tr>
+                    <td>" . $row ['fullname'] ." </td>
+                    <td>" . $row ['email'] ."</td>
+                    <td>" . $row ['ide_number'] ."</td>
+                    <td>" . $row ['mobile_number'] ."</td>
+                    <td>" . $row ['status'] ."</td>
         <td>
-        <a href="#"><img src="icons/" width="20"></a>
-        <a href="#"><img src="icons/update.png" width="20"></a>
-        <a href="#"><img src="icons/delete.png" width="20"></a>
+        <a href''#'><img src='icons/search.png' width='20'></a>
+        <a href='#'><img src='icons/update.png' width='20'></a>
+        <a href='#'><img src='icons/delete.png' width='20'></a>
         </td>
-      </tr>  
-   </table>
+      </tr>";
+    }
+?>
+</table>
 </body>
 </html>

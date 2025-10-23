@@ -29,7 +29,7 @@ $result_countries = pg_query($conn_supa, $query_countries);
       border-radius: 5px;
       margin: 5px;
       cursor: pointer;
-      text-decoration: none;
+      text-decoration: none; 
       display: inline-block;
     }
     .form-button:hover {
