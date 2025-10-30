@@ -45,10 +45,10 @@ $local_data_connection = "
   }else{
     echo "SO FAR SO GOOD BITCHES:::";
   };
-  */
+  
   if(!$conn_local){
     echo "Error";
   }else{
     echo "SO FAR SO GOOD BITCHES:::";
-  };
+  };*/
 ?>
