@@ -31,7 +31,7 @@ require('../config/database.php');
 <body align= "center">
     <form name="edit user-form" action = "update_user.php" method = "post">
         <label> User</label>
-        <input type="hidden" name= "id_number" value="<?php echo $user_id ?>"readonly required/><br><br>
+        <input type="hidden" name= "userId" value="<?php echo $user_id ?>"readonly required/><br><br>
         <label> Id_number: </label>
         <input type="text" name= "id_number" value="<?php echo $id_number ?>"readonly required/><br><br>
         <label> Firstname: </label>

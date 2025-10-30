@@ -17,7 +17,7 @@
     where
     id = '$user_id'
    ";
-   $result = pg_query($conn_local, $sql_delete_user);
+   $result = pg_query($conn_local, $sql_update_user);
     if (!$result){
         die("Error: ".pg_last_error());
     }
