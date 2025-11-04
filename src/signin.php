@@ -2,6 +2,15 @@
 //Step 1. Get database connection
 require('../config/database.php');
 
+//Cretae or start session
+session_start();
+
+//Verifica si tiene la id del usuario
+if(isset($_SESSION['session_user_id'])){
+  header('refresh:0;url=main.php');
+
+}
+
 //Step 2. Get form-date
 $e_mail= trim($_POST['email']);
 $p_wd= trim($_POST['passwd']);
@@ -13,7 +22,10 @@ $p_wd= trim($_POST['passwd']);
 //Step 3. Query to validate data
 $sql_check_user = "
 select
-u.email, u.password
+  u.id,
+  u.firtsname || ' ' || u.lastname as fullname,
+  u.email, 
+  u.password
 from
   users u
 where
@@ -24,7 +36,12 @@ limit 1
 
 //Step 4. Execute query
 
-$res_check = pg_query($conn_supa, $sql_check_user);
+$res_check = pg_query($conn_local, $sql_check_user);
+
+$row = pg_fetch_assoc($res_check);
+$_SESSION['session_user_id']= $row['id'];
+$_SESSION['session_user_fullname']= $row['fullname'];
+
 if(pg_num_rows($res_check)> 0){
 
  //echo "<script>alert('User already exist !!')</script>";

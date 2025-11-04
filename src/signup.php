@@ -28,7 +28,7 @@
    $res_check = pg_query($conn_local, $check_email);
    if(pg_num_rows($res_check)> 0){
       echo "<script>alert('User already exist !!')</script>";
-    header('refresh_0;url=signup.html');
+    header('refresh:0;url=signup.html');
    }else{
          //Step3.Create query to INSERT INTO.
    $query ="INSERT INTO users (firstname, lastname, mobile_number, ide_number, email, password)
@@ -44,7 +44,7 @@
       
     //echo "User has been created successfully !!! :D";
     echo "<script>alert('Success !!! Go to login')</script>";
-    header('refresh_0;url=signin.html');
+    header('refresh:0;url=signin.html');
    }else{
     echo "Something wrong! :p";
    }
