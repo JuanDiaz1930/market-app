@@ -1,6 +1,13 @@
 <?php 
-//Step 1. Get database connection
 require('../config/database.php');
+session_start();
+
+//Verifica si tiene la id del usuario
+if(!isset($_SESSION['session_user_id'])){
+  header('refresh:0;url=error_403.html');
+
+}
+
 ?>
 
 

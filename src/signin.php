@@ -23,15 +23,15 @@ $p_wd= trim($_POST['passwd']);
 $sql_check_user = "
 select
   u.id,
-  u.firtsname || ' ' || u.lastname as fullname,
+  u.firstname || ' ' || u.lastname as fullname,
   u.email, 
   u.password
 from
   users u
 where
-u.email = '$e_mail' and
-u.password = '$enc_pass'
-limit 1
+  u.email = '$e_mail' and
+  u.password = '$enc_pass'
+  limit 1
 ";
 
 //Step 4. Execute query
