@@ -9,8 +9,9 @@
    $l_name= trim($_POST['lname']); //ser iguales al alias que vienen del fronden
    $m_number=trim($_POST['mnumber']);
    $id_number=trim($_POST['idnumber']);
-   $e_mail=trim($_POST['email']);
+   $e_mail= strtolower(trim($_POST['email']));
    $p_wd=trim($_POST['passwd']);
+   $url_photo = "photos/user_default.png";
 
    //$enc_pass = password_hash($p_wd, PASSWORD_DEFAULT);
    $enc_pass = md5($p_wd);
@@ -31,8 +32,8 @@
     header('refresh:0;url=signup.html');
    }else{
          //Step3.Create query to INSERT INTO.
-   $query ="INSERT INTO users (firstname, lastname, mobile_number, ide_number, email, password)
-   Values ('$f_name', '$l_name', '$m_number', '$id_number', '$e_mail', '$enc_pass')";
+   $query ="INSERT INTO users (firstname, lastname, mobile_number, ide_number, email, password, url_photo)
+   Values ('$f_name', '$l_name', '$m_number', '$id_number', '$e_mail', '$enc_pass', '$url_photo')";
 
 
    //Step4. Execute query

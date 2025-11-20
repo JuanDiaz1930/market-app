@@ -26,7 +26,7 @@ if(!isset($_SESSION['session_user_id'])){
         <tr class="table-dark">
               <div class="spinner-border text-info"></div>
                 </div>
-       
+            <th><center>Photo</center></th>
             <th>Fullname</th>
             <th>E-mail</th>
             <th>Ide number</th>
@@ -37,6 +37,7 @@ if(!isset($_SESSION['session_user_id'])){
         <?php
         $sql_users = "
         select
+        u.url_photo,
             u.id as user_id,
 	        u.firstname || ' ' || u.lastname as fullname,
 	        u.email,
@@ -53,6 +54,7 @@ if(!isset($_SESSION['session_user_id'])){
         while ($row = pg_fetch_assoc($result)){
             echo "
                 <tr>
+                    <td align= 'center'><img src=" . $row['url_photo'] . " width ='30'></td>
                     <td>" . $row ['fullname'] ." </td>
                     <td>" . $row ['email'] ."</td>
                     <td>" . $row ['ide_number'] ."</td>

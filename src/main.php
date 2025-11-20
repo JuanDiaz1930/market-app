@@ -14,7 +14,7 @@ if(!isset($_SESSION['session_user_id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="src/icons/market_main.png" />
     <style>
-        /* Estilo global */
+     
         body {
             background: linear-gradient(135deg, #4e73df, #1d2f6d);
             font-family: 'Roboto', sans-serif;
@@ -93,15 +93,16 @@ if(!isset($_SESSION['session_user_id'])){
     <div class="container">
         <h1>Welcome to MarketApp</h1>
         <div class="user-info">
-            <b>User:</b> <?php echo htmlspecialchars($_SESSION['session_user_fullname']); ?>
+            <br><br><b>User:</b> <?php echo htmlspecialchars($_SESSION['session_user_fullname']); ?><br><br>
+            <?php echo '<img src=' .$_SESSION['session_user_url_photo']; ?>
+            
+            
         </div>
-        <a href="list_users.php">List All Users</a>
+        <br><br><a href="list_users.php">List All Users</a>
         <a href="logout.php">Logout</a>
     </div>
 
-    <footer>
-        <p>&copy; 2025 MarketApp. All rights reserved. | <a href="about_us.html">About Us</a></p>
-    </footer>
+   
 </body>
 
 </html>
